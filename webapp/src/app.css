@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "TASAOrbiter";
+  src: url("./assets/typefaces/TASAOrbiterVF.woff2");
+}
+
+:root {
+  --text-primary: #b1d0e7;
+  --text-secondary: #6492b4;
+}
+
+* {
+  outline-offset: 4px;
+}
+
+body {
+  margin: 0;
+  font-family: "TASAOrbiter";
+  color: var(--text-primary);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner-link {
+  transition: all 0.35s ease-in-out;
+  box-shadow: 0px 1.5px 0 0 #1E3A54;
+  height: 20px;
+}
+
+.banner-link:hover {
+  box-shadow: 0px 2.5px 0 0 #1E3A54;
+}
+
+.level_indicator {
+  position: absolute;
+  width: auto;
+  left: 30%;
+  bottom: 45%;
+}
+
+.scope_indicator {
+  position: absolute;
+  width: auto;
+  left: 0%;
+  bottom: 0%;
+}
+
+select option {
+  background-color: #0b1a33;
+  color: rgba(100, 146, 180, 0.5) rgba(20, 40, 55, 0.3);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(20, 40, 55, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 146, 180, 0.5);
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 146, 180, 0.8);
+}
+
+@keyframes alertAnimation {
+  0% {filter: drop-shadow(0px 0px 0px none);}
+  50% {filter: drop-shadow(0px 0px 20px red);}
+  100% {filter: drop-shadow(0px 0px 0px none);}
+}
+
+.alertAnim {
+  background-color: none;
+  animation-name: alertAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
